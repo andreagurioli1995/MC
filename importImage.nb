@@ -1,0 +1,125 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4078,        115]
+NotebookOptionsPosition[      3595,         98]
+NotebookOutlinePosition[      3998,        114]
+CellTagsIndexPosition[      3955,        111]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ClusteringComponents", "[", 
+     RowBox[{
+      RowBox[{"ImageResize", "[", 
+       RowBox[{"imgD", ",", "200"}], "]"}], ",", 
+      RowBox[{"Method", "\[Rule]", "\"\<GaussianMixture\>\""}]}], "]"}], "//",
+     "Colorize"}], ",", 
+   RowBox[{"Row", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Item", "[", 
+       RowBox[{
+        RowBox[{"FileNameSetter", "[", 
+         RowBox[{"Dynamic", "[", "selectedFile", "]"}], "]"}], ",", 
+        RowBox[{"Alignment", "\[Rule]", "Center"}]}], "]"}], ",", 
+      RowBox[{"Button", "[", 
+       RowBox[{"\"\<Import\>\"", ",", 
+        RowBox[{"imgD", "=", 
+         RowBox[{"Import", "[", "selectedFile", "]"}]}]}], "]"}]}], "}"}], 
+    "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.82859336114883*^9, 3.8285933675345507`*^9}},
+ CellLabel->
+  "In[622]:=",ExpressionUUID->"95f212cf-d298-40f7-9c94-2bbc20fe303c"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       Row[{
+         Item[
+          FileNameSetter[
+           Dynamic[$CellContext`selectedFile]], Alignment -> Center], 
+         Button[
+         "Import", $CellContext`imgD = Import[$CellContext`selectedFile]]}]], 
+      Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
+    200., {89., 94.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {}, "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Colorize[
+        ClusteringComponents[
+         ImageResize[$CellContext`imgD, 200], Method -> "GaussianMixture"]], 
+      "Specifications" :> {
+        Row[{
+          Item[
+           FileNameSetter[
+            Dynamic[$CellContext`selectedFile]], Alignment -> Center], 
+          Button[
+          "Import", $CellContext`imgD = Import[$CellContext`selectedFile]]}]},
+       "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{247., {133.6875, 139.3125}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.828593344789372*^9, 3.8285933680461893`*^9}},
+ CellLabel->
+  "Out[622]=",ExpressionUUID->"468d7868-1bf3-41f7-a389-6e7ca0416e70"]
+}, Open  ]]
+},
+WindowSize->{1080., 579.75},
+WindowMargins->{{-1362, Automatic}, {102, Automatic}},
+FrontEndVersion->"12.2 for Linux x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7bcee67c-29c8-43a5-8815-2a57ec0060b0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 941, 25, 51, "Input",ExpressionUUID->"95f212cf-d298-40f7-9c94-2bbc20fe303c"],
+Cell[1524, 49, 2055, 46, 292, "Output",ExpressionUUID->"468d7868-1bf3-41f7-a389-6e7ca0416e70"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
