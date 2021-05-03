@@ -10,47 +10,165 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4078,        115]
-NotebookOptionsPosition[      3595,         98]
-NotebookOutlinePosition[      3998,        114]
-CellTagsIndexPosition[      3955,        111]
+NotebookDataLength[     12031,        270]
+NotebookOptionsPosition[     11244,        250]
+NotebookOutlinePosition[     11646,        266]
+CellTagsIndexPosition[     11603,        263]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"imgD", " ", "=", 
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1:eJztyjEKwkAQBdBFm1TBK3gL25S2EQ+QkDXYbGAjiFf0JrmFk1tYvAd/mPnM
+eVz6xyGltDYx+uHd1Tp8bqc47mV9ziVP1/LKc66X8RhlG79bZN+/AAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAB/7wcto292
+      "], {{0, 526.}, {745., 0}}, {0, 255},
+      ColorFunction->RGBColor],
+     BoxForm`ImageTag[
+     "Byte", ColorSpace -> "RGB", Interleaving -> True, MetaInformation -> 
+      Association[
+       "XMP" -> Association[
+         "XMPBasicSchema" -> 
+          Association["CreatorTool" -> "Adobe Photoshop CS6 (Macintosh)"], 
+          "XMPMediaManagementSchema" -> 
+          Association[
+           "InstanceID" -> "xmp.iid:E62194301E5D11E5941BFB3BD6212510", 
+            "DocumentID" -> "xmp.did:E62194311E5D11E5941BFB3BD6212510", 
+            "DerivedFrom" -> 
+            Association[
+             "Reference" -> 
+              Association[
+               "InstanceID" -> "xmp.iid:E621942E1E5D11E5941BFB3BD6212510", 
+                "DocumentID" -> 
+                "xmp.did:E621942F1E5D11E5941BFB3BD6212510"]]]], "Comments" -> 
+        Association["Software" -> "Adobe ImageReady"]]],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{745., 526.},
+    PlotRange->{{0, 745.}, {0, 526.}}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.82859336114883*^9, 3.8285933675345507`*^9}, {
+   3.829016633094243*^9, 3.829016635051918*^9}, {3.829016675589085*^9, 
+   3.829016718178089*^9}, {3.82901675769001*^9, 3.829016760128611*^9}, {
+   3.829017028377388*^9, 3.8290170410776367`*^9}, 
+   3.829021675015315*^9},ExpressionUUID->"95f212cf-d298-40f7-9c94-\
+2bbc20fe303c"],
 
 Cell[CellGroupData[{
-Cell[BoxData[
- RowBox[{"Manipulate", "[", 
+
+Cell[BoxData[{
+ RowBox[{
   RowBox[{
    RowBox[{
-    RowBox[{"ClusteringComponents", "[", 
+    RowBox[{"TestManipulate", "[", "]"}], ":=", 
+    RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
      RowBox[{
-      RowBox[{"ImageResize", "[", 
-       RowBox[{"imgD", ",", "200"}], "]"}], ",", 
-      RowBox[{"Method", "\[Rule]", "\"\<GaussianMixture\>\""}]}], "]"}], "//",
-     "Colorize"}], ",", 
-   RowBox[{"Row", "[", 
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"Item", "[", 
-       RowBox[{
-        RowBox[{"FileNameSetter", "[", 
-         RowBox[{"Dynamic", "[", "selectedFile", "]"}], "]"}], ",", 
-        RowBox[{"Alignment", "\[Rule]", "Center"}]}], "]"}], ",", 
-      RowBox[{"Button", "[", 
-       RowBox[{"\"\<Import\>\"", ",", 
-        RowBox[{"imgD", "=", 
-         RowBox[{"Import", "[", "selectedFile", "]"}]}]}], "]"}]}], "}"}], 
-    "]"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.82859336114883*^9, 3.8285933675345507`*^9}},
- CellLabel->
-  "In[622]:=",ExpressionUUID->"95f212cf-d298-40f7-9c94-2bbc20fe303c"],
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"Or", "[", 
+          RowBox[{
+           RowBox[{"x", " ", "\[Equal]", "\"\<KMeans\>\""}], ",", 
+           RowBox[{"x", " ", "\[Equal]", "\"\<KMedoids\>\""}], ",", 
+           RowBox[{"x", " ", "\[Equal]", "  ", "\"\<Spectral\>\""}]}], "]"}], 
+         ",", 
+         RowBox[{"ClusteringComponents", "[", 
+          RowBox[{
+           RowBox[{"ImageResize", "[", 
+            RowBox[{"imgD", ",", "200"}], "]"}], ",", "cl", ",", 
+           RowBox[{"Method", "\[Rule]", "x"}]}], "]"}], ",", 
+         RowBox[{"ClusteringComponents", "[", 
+          RowBox[{
+           RowBox[{"ImageResize", "[", 
+            RowBox[{"imgD", ",", "200"}], "]"}], ",", 
+           RowBox[{"Method", "\[Rule]", "x"}]}], "]"}]}], "]"}], "//", 
+       "Colorize"}], ",", 
+      RowBox[{"Row", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Item", "[", 
+          RowBox[{
+           RowBox[{"FileNameSetter", "[", 
+            RowBox[{"Dynamic", "[", "selectedFile", "]"}], "]"}], ",", 
+           RowBox[{"Alignment", "->", "Center"}]}], "]"}], ",", 
+         RowBox[{"Button", "[", 
+          RowBox[{"\"\<Import\>\"", ",", 
+           RowBox[{"imgD", "=", 
+            RowBox[{"Import", "[", "selectedFile", "]"}]}]}], "]"}]}], "}"}], 
+       "]"}], ",", " ", 
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"x", ",", " ", "\"\<KMeans\>\"", ",", "\"\<Method\>\""}], 
+          "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<KMeans\>\"", ",", "\"\<KMedoids\>\"", ",", "\"\<Spectral\>\"", 
+           ",", "\"\<MeanShift\>\"", ",", "\"\<GaussianMixture\>\"", ",", 
+           "\"\<NeighborhoodContraction\>\""}], "}"}]}], "}"}], "]"}], ",", 
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"cl", ",", " ", "1", ",", " ", "\"\<N. cluster\>\""}], 
+          "}"}], ",", " ", "1", ",", " ", "15", ",", " ", "1", ",", " ", 
+         RowBox[{"Appearance", " ", "->", " ", "\"\<Labeled\>\""}]}], "}"}], 
+       "]"}]}], "]"}]}], ";"}], " ", 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"TestManipulate", "[", "]"}]}], "Input",
+ CellChangeTimes->{{3.829021635404992*^9, 3.829021688111536*^9}, {
+   3.829021724085348*^9, 3.829021763560491*^9}, {3.829021840912548*^9, 
+   3.829021859647437*^9}, {3.8290219038891363`*^9, 3.8290219069143457`*^9}, {
+   3.829021976925949*^9, 3.8290220144661703`*^9}, {3.829022052994467*^9, 
+   3.829022075486619*^9}, 3.829022117701326*^9, {3.8290222317909393`*^9, 
+   3.829022245274588*^9}, {3.8290223188631067`*^9, 3.8290223526687317`*^9}, {
+   3.829022475161686*^9, 3.829022510940236*^9}, {3.829022601719203*^9, 
+   3.82902260372221*^9}, {3.829022648495605*^9, 3.8290227031226273`*^9}, 
+   3.829022859649395*^9, {3.829022921597467*^9, 3.829023024211938*^9}, {
+   3.8290230591978283`*^9, 3.829023083729556*^9}, {3.829023162091435*^9, 
+   3.829023171238264*^9}, {3.8290232482584267`*^9, 3.829023271815539*^9}, {
+   3.8290233822110147`*^9, 3.829023407587296*^9}, {3.829023468579043*^9, 
+   3.829023480080768*^9}, {3.8290235333851*^9, 3.829023556556117*^9}, 
+   3.829023742628124*^9, {3.829023775745326*^9, 3.829023776661083*^9}, {
+   3.829023874656846*^9, 3.829023946261754*^9}, {3.829024411816214*^9, 
+   3.829024466016838*^9}, 3.829024514092731*^9, {3.8290245633316393`*^9, 
+   3.829024567273923*^9}},
+ CellLabel->"In[82]:=",ExpressionUUID->"b0519130-5075-41ee-b949-a9ef86ba0949"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+   DynamicModuleBox[{$CellContext`cl$$ = 1, $CellContext`x$$ = "KMeans", 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
       Hold[
@@ -60,27 +178,44 @@ Cell[BoxData[
            Dynamic[$CellContext`selectedFile]], Alignment -> Center], 
          Button[
          "Import", $CellContext`imgD = Import[$CellContext`selectedFile]]}]], 
-      Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
-    200., {89., 94.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True}, 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`x$$], "KMeans", "Method"}, {
+      "KMeans", "KMedoids", "Spectral", "MeanShift", "GaussianMixture", 
+       "NeighborhoodContraction"}}, {{
+       Hold[$CellContext`cl$$], 1, "N. cluster"}, 1, 15, 1}}, 
+    Typeset`size$$ = {200., {89., 94.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
     DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, "Variables" :> {}, "ControllerVariables" :> {}, 
+     1, StandardForm, 
+      "Variables" :> {$CellContext`cl$$ = 1, $CellContext`x$$ = "KMeans"}, 
+      "ControllerVariables" :> {}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, "Body" :> Colorize[
-        ClusteringComponents[
-         ImageResize[$CellContext`imgD, 200], Method -> "GaussianMixture"]], 
+        If[
+         Or[$CellContext`x$$ == "KMeans", $CellContext`x$$ == 
+          "KMedoids", $CellContext`x$$ == "Spectral"], 
+         ClusteringComponents[
+          ImageResize[$CellContext`imgD, 200], $CellContext`cl$$, 
+          Method -> $CellContext`x$$], 
+         ClusteringComponents[
+          ImageResize[$CellContext`imgD, 200], Method -> $CellContext`x$$]]], 
       "Specifications" :> {
         Row[{
           Item[
            FileNameSetter[
             Dynamic[$CellContext`selectedFile]], Alignment -> Center], 
           Button[
-          "Import", $CellContext`imgD = Import[$CellContext`selectedFile]]}]},
-       "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{247., {133.6875, 139.3125}},
+          "Import", $CellContext`imgD = 
+           Import[$CellContext`selectedFile]]}], {{$CellContext`x$$, "KMeans",
+           "Method"}, {
+         "KMeans", "KMedoids", "Spectral", "MeanShift", "GaussianMixture", 
+          "NeighborhoodContraction"}}, {{$CellContext`cl$$, 1, "N. cluster"}, 
+         1, 15, 1, Appearance -> "Labeled"}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{311., {160.1875, 165.8125}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -91,13 +226,30 @@ Cell[BoxData[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{{3.828593344789372*^9, 3.8285933680461893`*^9}},
- CellLabel->
-  "Out[622]=",ExpressionUUID->"468d7868-1bf3-41f7-a389-6e7ca0416e70"]
-}, Open  ]]
+ CellChangeTimes->{
+  3.829021653426277*^9, 3.829021910067956*^9, 3.829022017033086*^9, 
+   3.829022076996767*^9, 3.829022179390523*^9, {3.829022236356406*^9, 
+   3.8290222477684507`*^9}, 3.829022633337968*^9, 3.8290228973937187`*^9, 
+   3.829023028240315*^9, {3.8290230848526382`*^9, 3.829023097179812*^9}, 
+   3.829023173454729*^9, 3.829023274147298*^9, 3.8290234330222483`*^9, 
+   3.829023482740089*^9, 3.829023557600008*^9, 3.829023685212902*^9, 
+   3.8290237436915092`*^9, 3.829023777677805*^9, 3.829023887525909*^9, 
+   3.829023947569818*^9, 3.8290245916177063`*^9},
+ CellLabel->"Out[83]=",ExpressionUUID->"6238100a-af83-4cc8-b1ef-8d557df5d726"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.829024102641692*^9, 
+  3.8290241099907417`*^9}},ExpressionUUID->"540f8554-5fb2-4a07-9fe1-\
+ebfa7e9b092f"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.829024111943145*^9, 
+  3.8290241119548197`*^9}},ExpressionUUID->"eca8dc1b-f528-4005-99c7-\
+79cc64a6f18e"]
 },
 WindowSize->{1080., 579.75},
-WindowMargins->{{-1362, Automatic}, {102, Automatic}},
+WindowMargins->{{-1230, Automatic}, {27, Automatic}},
 FrontEndVersion->"12.2 for Linux x86 (64-bit) (December 12, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"7bcee67c-29c8-43a5-8815-2a57ec0060b0"
@@ -113,13 +265,14 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[558, 20, 3172, 62, 78, "Input",ExpressionUUID->"95f212cf-d298-40f7-9c94-2bbc20fe303c"],
 Cell[CellGroupData[{
-Cell[580, 22, 941, 25, 51, "Input",ExpressionUUID->"95f212cf-d298-40f7-9c94-2bbc20fe303c"],
-Cell[1524, 49, 2055, 46, 292, "Output",ExpressionUUID->"468d7868-1bf3-41f7-a389-6e7ca0416e70"]
-}, Open  ]]
+Cell[3755, 86, 3712, 78, 174, InheritFromParent,ExpressionUUID->"b0519130-5075-41ee-b949-a9ef86ba0949"],
+Cell[7470, 166, 3444, 71, 345, "Output",ExpressionUUID->"6238100a-af83-4cc8-b1ef-8d557df5d726"]
+}, Open  ]],
+Cell[10929, 240, 154, 3, 29, "Input",ExpressionUUID->"540f8554-5fb2-4a07-9fe1-ebfa7e9b092f"],
+Cell[11086, 245, 154, 3, 29, InheritFromParent,ExpressionUUID->"eca8dc1b-f528-4005-99c7-79cc64a6f18e"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
