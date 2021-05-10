@@ -10,15 +10,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     41962,        900]
-NotebookOptionsPosition[     40203,        863]
-NotebookOutlinePosition[     40721,        882]
-CellTagsIndexPosition[     40678,        879]
+NotebookDataLength[     26059,        554]
+NotebookOptionsPosition[     25453,        534]
+NotebookOutlinePosition[     25971,        553]
+CellTagsIndexPosition[     25928,        550]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData[
+
+Cell[CellGroupData[{
+Cell[BoxData[{
  RowBox[{
   RowBox[{"imgD", " ", "=", 
    GraphicsBox[
@@ -74,28 +76,11 @@ AAAAAAAAAAB/7wcto292
      Selectable->False],
     DefaultBaseStyle->"ImageGraphics",
     ImageSizeRaw->{745., 526.},
-    PlotRange->{{0, 745.}, {0, 526.}}]}], ";"}]], "Input",
- CellChangeTimes->{{3.82859336114883*^9, 3.8285933675345507`*^9}, {
-   3.829016633094243*^9, 3.829016635051918*^9}, {3.829016675589085*^9, 
-   3.829016718178089*^9}, {3.82901675769001*^9, 3.829016760128611*^9}, {
-   3.829017028377388*^9, 3.8290170410776367`*^9}, 3.829021675015315*^9},
- CellLabel->"In[1]:=",ExpressionUUID->"95f212cf-d298-40f7-9c94-2bbc20fe303c"],
-
-Cell[BoxData[{
+    PlotRange->{{0, 745.}, {0, 526.}}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"selectedFile", "=", "Null"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"edge", " ", "=", " ", "False"}], ";"}]}], "Input",
- CellChangeTimes->{{3.829191009480043*^9, 3.829191040644885*^9}, {
-  3.829191081250969*^9, 3.829191088485056*^9}, {3.829197953957952*^9, 
-  3.829197957590366*^9}, {3.829624401830803*^9, 3.8296244054787292`*^9}, {
-  3.829625138259753*^9, 3.829625138621973*^9}, {3.829625773018495*^9, 
-  3.8296257733355923`*^9}},
- CellLabel->"In[2]:=",ExpressionUUID->"fea28f97-c79c-4450-af4e-33b1e59c20e6"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
+  RowBox[{"edge", " ", "=", " ", "False"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -118,13 +103,13 @@ Cell[BoxData[{
              RowBox[{"ClusteringComponents", "[", 
               RowBox[{
                RowBox[{"ImageResize", "[", 
-                RowBox[{"imgD", ",", "500"}], "]"}], ",", "cl", ",", 
+                RowBox[{"imgD", ",", "400"}], "]"}], ",", "cl", ",", 
                RowBox[{"Method", "\[Rule]", "x"}]}], "]"}]}], ",", 
             RowBox[{"imgA", "=", 
              RowBox[{"ClusteringComponents", "[", 
               RowBox[{
                RowBox[{"ImageResize", "[", 
-                RowBox[{"imgD", ",", "500"}], "]"}], ",", 
+                RowBox[{"imgD", ",", "400"}], "]"}], ",", 
                RowBox[{"Method", "\[Rule]", "x"}]}], "]"}]}]}], "]"}], "//", 
           "Colorize"}], ",", 
          RowBox[{"Row", "[", 
@@ -178,7 +163,12 @@ Cell[BoxData[{
                "}"}], ",", " ", 
               RowBox[{"{", 
                RowBox[{
-               "\"\<MeanShift\>\"", ",", "\"\<GaussianMixture\>\"", ",", 
+                RowBox[{
+                "\"\<MeanShift\>\"", "\[Rule]", " ", "\"\<Mean Shift\>\""}], 
+                ",", 
+                RowBox[{
+                "\"\<GaussianMixture\>\"", "\[Rule]", " ", 
+                 "\"\<Gaussian Mixture\>\""}], ",", 
                 RowBox[{
                 "\"\<NeighborhoodContraction\>\"", "\[Rule]", 
                  "\"\<Neighborhood Contraction\>\""}]}], "}"}]}], "}"}], 
@@ -248,6 +238,18 @@ Cell[BoxData[{
              RowBox[{"imgA", "//", "Colorize"}], "]"}], "[", 
             RowBox[{"[", "1", "]"}], "]"}], ",", "1"}], "}"}], ",", " ", 
          "Delimiter", ",", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Button", "[", 
+             RowBox[{"\"\<Apply Edge Detection\>\"", ",", 
+              RowBox[{"edge", " ", "=", " ", "True"}], ",", 
+              RowBox[{"ImageSize", "->", "Large"}]}], "]"}], ",", 
+            RowBox[{"Button", "[", 
+             RowBox[{"\"\<Remove Edge Detection\>\"", ",", 
+              RowBox[{"edge", " ", "=", " ", "False"}], ",", " ", 
+              RowBox[{"ImageSize", "->", "Large"}]}], "]"}]}], "}"}], "]"}], 
+         ",", 
          RowBox[{"Button", "[", 
           RowBox[{"\"\<Save image\>\"", ",", 
            RowBox[{"Export", "[", 
@@ -259,16 +261,8 @@ Cell[BoxData[{
                 RowBox[{"StringJoin", "[", "\"\<takeCluster.jpg\>\"", "]"}]}],
                 "}"}], "]"}], ",", "imgDrop", ",", "\"\<JPEG\>\""}], "]"}], 
            ",", " ", 
-           RowBox[{"ImageSize", "->", "Large"}]}], "]"}], ",", "Delimiter", 
-         ",", 
-         RowBox[{"Button", "[", 
-          RowBox[{"\"\<Apply Edge Detection\>\"", ",", 
-           RowBox[{"edge", " ", "=", " ", "True"}]}], "]"}], ",", "Delimiter",
-          ",", 
-         RowBox[{"Button", "[", 
-          RowBox[{"\"\<Remove Edge Detection\>\"", ",", 
-           RowBox[{"edge", " ", "=", " ", "False"}]}], "]"}]}], "]"}]}], 
-      "}"}], "]"}]}], ";"}], "  ", "\[IndentingNewLine]", 
+           RowBox[{"ImageSize", "->", "Large"}]}], "]"}], ",", "Delimiter"}], 
+        "]"}]}], "}"}], "]"}]}], ";"}], "  ", "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{"ImageAdd", "[", 
     RowBox[{
@@ -339,16 +333,20 @@ Cell[BoxData[{
    3.829625609638081*^9, 3.829625609949192*^9}, {3.829625643207693*^9, 
    3.8296256486431513`*^9}, {3.829625680959486*^9, 3.829625721864812*^9}, {
    3.829625764702675*^9, 3.829625816582365*^9}, {3.829625861823015*^9, 
-   3.8296259137082872`*^9}, {3.8296260471517277`*^9, 3.8296260481591997`*^9}},
- 
- CellLabel->"In[6]:=",ExpressionUUID->"b0519130-5075-41ee-b949-a9ef86ba0949"],
+   3.8296259137082872`*^9}, {3.8296260471517277`*^9, 3.8296260481591997`*^9}, 
+   3.8296270509146147`*^9, {3.8296271044615717`*^9, 3.829627171990897*^9}, {
+   3.829627910317216*^9, 3.829627923537334*^9}, {3.829628093645204*^9, 
+   3.829628122278963*^9}, {3.8296281676759357`*^9, 3.82962819456857*^9}, {
+   3.829628231852539*^9, 3.829628268140696*^9}, {3.829628307394088*^9, 
+   3.8296283371336412`*^9}, {3.829628608531955*^9, 3.829628613656193*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"b0519130-5075-41ee-b949-a9ef86ba0949"],
 
 Cell[BoxData[
  TagBox[GridBox[{
     {
      TagBox[
       StyleBox[
-       DynamicModuleBox[{$CellContext`cl$$ = 9, $CellContext`x$$ = "KMeans", 
+       DynamicModuleBox[{$CellContext`cl$$ = 2, $CellContext`x$$ = "KMeans", 
         Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
         Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, 
         Typeset`animvar$$ = 1, Typeset`name$$ = "\"untitled\"", 
@@ -370,7 +368,8 @@ Cell[BoxData[
              Manipulate`Place[1], 
              Manipulate`Place[2]}]], Manipulate`Dump`ThisIsNotAControl}, {{
            Hold[$CellContext`x$$], "KMeans", "Method"}, {
-          "MeanShift", "GaussianMixture", "NeighborhoodContraction" -> 
+          "MeanShift" -> "Mean Shift", "GaussianMixture" -> 
+           "Gaussian Mixture", "NeighborhoodContraction" -> 
            "Neighborhood Contraction"}}, {
           Hold[
            Row[{
@@ -383,8 +382,8 @@ Cell[BoxData[
                StringJoin["clusterImage.jpg"]}], 
              Colorize[$CellContext`imgA], "JPEG"], ImageSize -> Large]], 
           Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
-        725., {328., 334.65}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-        Typeset`skipInitDone$$ = True}, 
+        580., {201., 207.89999999999998`}}, Typeset`update$$ = 0, 
+        Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          2, StandardForm, 
           "Variables" :> {$CellContext`cl$$ = 2, $CellContext`x$$ = "KMeans"},
@@ -399,10 +398,10 @@ Cell[BoxData[
              Or[$CellContext`x$$ == "KMeans", $CellContext`x$$ == 
               "KMedoids", $CellContext`x$$ == "Spectral"], $CellContext`imgA = 
              ClusteringComponents[
-               ImageResize[$CellContext`imgD, 500], $CellContext`cl$$, 
+               ImageResize[$CellContext`imgD, 400], $CellContext`cl$$, 
                Method -> $CellContext`x$$], $CellContext`imgA = 
              ClusteringComponents[
-               ImageResize[$CellContext`imgD, 500], 
+               ImageResize[$CellContext`imgD, 400], 
                Method -> $CellContext`x$$]]], "Specifications" :> {
             Row[{
               Item[
@@ -419,7 +418,8 @@ Cell[BoxData[
               Manipulate`Place[1], 
               Manipulate`Place[2]}], 
             Delimiter, {{$CellContext`x$$, "KMeans", "Method"}, {
-             "MeanShift", "GaussianMixture", "NeighborhoodContraction" -> 
+             "MeanShift" -> "Mean Shift", "GaussianMixture" -> 
+              "Gaussian Mixture", "NeighborhoodContraction" -> 
               "Neighborhood Contraction"}, ControlPlacement -> 3}, 
             Row[{
               Manipulate`Place[3]}], Delimiter, 
@@ -430,7 +430,7 @@ Cell[BoxData[
                 StringJoin["clusterImage.jpg"]}], 
               Colorize[$CellContext`imgA], "JPEG"], ImageSize -> Large]}, 
           "Options" :> {}, "DefaultOptions" :> {}],
-         ImageSizeCache->{791., {467.869140625, 476.130859375}},
+         ImageSizeCache->{697., {340.869140625, 349.130859375}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -444,35 +444,38 @@ Cell[BoxData[
     {
      TagBox[
       StyleBox[
-       DynamicModuleBox[{$CellContext`bottom$$ = 281., $CellContext`left$$ = 
-        62.5, $CellContext`right$$ = 500, $CellContext`top$$ = 1., 
+       DynamicModuleBox[{$CellContext`bottom$$ = 366, $CellContext`left$$ = 
+        1, $CellContext`right$$ = 400, $CellContext`top$$ = 1, 
         Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
         Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, 
         Typeset`animvar$$ = 1, Typeset`name$$ = "\"untitled\"", 
         Typeset`specs$$ = {{
-          Hold[$CellContext`top$$], 1, 353}, {
-          Hold[$CellContext`bottom$$], 353, 1}, {
-          Hold[$CellContext`left$$], 1, 500}, {
-          Hold[$CellContext`right$$], 500, 1}, {
+          Hold[$CellContext`top$$], 1, 366}, {
+          Hold[$CellContext`bottom$$], 366, 1}, {
+          Hold[$CellContext`left$$], 1, 400}, {
+          Hold[$CellContext`right$$], 400, 1}, {
+          Hold[
+           Row[{
+             Button[
+             "Apply Edge Detection", $CellContext`edge = True, ImageSize -> 
+              Large], 
+             Button[
+             "Remove Edge Detection", $CellContext`edge = False, ImageSize -> 
+              Large]}]], Manipulate`Dump`ThisIsNotAControl}, {
           Hold[
            Button["Save image", 
             Export[
              FileNameJoin[{
                NotebookDirectory[], 
                StringJoin["takeCluster.jpg"]}], $CellContext`imgDrop, "JPEG"],
-             ImageSize -> Large]], Manipulate`Dump`ThisIsNotAControl}, {
-          Hold[
-           Button["Apply Edge Detection", $CellContext`edge = True]], 
-          Manipulate`Dump`ThisIsNotAControl}, {
-          Hold[
-           Button["Remove Edge Detection", $CellContext`edge = False]], 
-          Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
-        636.55, {200., 207.45}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-        Typeset`skipInitDone$$ = True}, 
+             ImageSize -> Large]], Manipulate`Dump`ThisIsNotAControl}}, 
+        Typeset`size$$ = {580., {201., 207.89999999999998`}}, 
+        Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+        True}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          1, StandardForm, 
-          "Variables" :> {$CellContext`bottom$$ = 353, $CellContext`left$$ = 
-            1, $CellContext`right$$ = 500, $CellContext`top$$ = 1}, 
+          "Variables" :> {$CellContext`bottom$$ = 366, $CellContext`left$$ = 
+            1, $CellContext`right$$ = 400, $CellContext`top$$ = 1}, 
           "ControllerVariables" :> {}, 
           "OtherVariables" :> {
            Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
@@ -491,19 +494,23 @@ $CellContext`imgDrop = ImageTake[
               Colorize[$CellContext`imgA], {$CellContext`top$$, \
 $CellContext`bottom$$}, {$CellContext`left$$, $CellContext`right$$}]], 
           "Specifications" :> {{$CellContext`top$$, 1, 
-             353}, {$CellContext`bottom$$, 353, 1}, {$CellContext`left$$, 1, 
-             500}, {$CellContext`right$$, 500, 1}, Delimiter, 
+             366}, {$CellContext`bottom$$, 366, 1}, {$CellContext`left$$, 1, 
+             400}, {$CellContext`right$$, 400, 1}, Delimiter, 
+            Row[{
+              Button[
+              "Apply Edge Detection", $CellContext`edge = True, ImageSize -> 
+               Large], 
+              Button[
+              "Remove Edge Detection", $CellContext`edge = False, ImageSize -> 
+               Large]}], 
             Button["Save image", 
              Export[
               FileNameJoin[{
                 NotebookDirectory[], 
                 StringJoin["takeCluster.jpg"]}], $CellContext`imgDrop, 
-              "JPEG"], ImageSize -> Large], Delimiter, 
-            Button["Apply Edge Detection", $CellContext`edge = True], 
-            Delimiter, 
-            Button["Remove Edge Detection", $CellContext`edge = False]}, 
-          "Options" :> {}, "DefaultOptions" :> {}],
-         ImageSizeCache->{703., {373.869140625, 382.130859375}},
+              "JPEG"], ImageSize -> Large], Delimiter}, "Options" :> {}, 
+          "DefaultOptions" :> {}],
+         ImageSizeCache->{646., {339.869140625, 348.130859375}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -519,346 +526,10 @@ $CellContext`bottom$$}, {$CellContext`left$$, $CellContext`right$$}]],
    GridBoxAlignment->{"Columns" -> {{Left}}},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
   "Column"]], "Output",
- CellChangeTimes->{
-  3.8296244912350283`*^9, 3.829624631480445*^9, 3.829624671587276*^9, 
-   3.829624702399387*^9, 3.829624799862027*^9, {3.829625219447556*^9, 
-   3.829625240705016*^9}, {3.8296254895653477`*^9, 3.829625511578038*^9}, {
-   3.829625709865513*^9, 3.8296257230238247`*^9}, {3.829625853435647*^9, 
-   3.829625914976894*^9}, 3.829626049137991*^9, {3.82962610839686*^9, 
-   3.829626119138178*^9}},
- CellLabel->"Out[7]=",ExpressionUUID->"89438a80-9ae3-49af-a494-652fb8bd49e8"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Manipulate", "[", 
-  RowBox[{
-   RowBox[{"ImageTake", "[", 
-    RowBox[{
-     RowBox[{"imgA", "//", "Colorize"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"top", ",", "bottom"}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"left", ",", "right"}], "}"}]}], "]"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"top", ",", "1", ",", 
-     RowBox[{
-      RowBox[{"ImageDimensions", "[", 
-       RowBox[{"imgA", "//", "Colorize"}], "]"}], "[", 
-      RowBox[{"[", "2", "]"}], "]"}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"bottom", ",", 
-     RowBox[{
-      RowBox[{"ImageDimensions", "[", 
-       RowBox[{"imgA", "//", "Colorize"}], "]"}], "[", 
-      RowBox[{"[", "2", "]"}], "]"}], ",", "1"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"left", ",", "1", ",", 
-     RowBox[{
-      RowBox[{"ImageDimensions", "[", 
-       RowBox[{"imgA", "//", "Colorize"}], "]"}], "[", 
-      RowBox[{"[", "1", "]"}], "]"}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"right", ",", 
-     RowBox[{
-      RowBox[{"ImageDimensions", "[", 
-       RowBox[{"imgA", "//", "Colorize"}], "]"}], "[", 
-      RowBox[{"[", "1", "]"}], "]"}], ",", "1"}], "}"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.829195511363192*^9, 3.8291955133250837`*^9}, 
-   3.8291961340355864`*^9, 3.829196555211121*^9, 3.829197992300047*^9, {
-   3.829621663880459*^9, 3.829621684721946*^9}, {3.8296256204852657`*^9, 
-   3.8296256682710114`*^9}},
- CellLabel->"In[10]:=",ExpressionUUID->"8df040f8-9961-42f5-a79c-2d3fa2fa7c26"],
-
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`bottom$$ = 457, $CellContext`left$$ = 
-    1, $CellContext`right$$ = 500, $CellContext`top$$ = 1, Typeset`show$$ = 
-    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`top$$], 1, 457}, {
-      Hold[$CellContext`bottom$$], 457, 1}, {
-      Hold[$CellContext`left$$], 1, 500}, {
-      Hold[$CellContext`right$$], 500, 1}}, Typeset`size$$ = {
-    725., {328., 334.65}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, 
-      "Variables" :> {$CellContext`bottom$$ = 457, $CellContext`left$$ = 
-        1, $CellContext`right$$ = 500, $CellContext`top$$ = 1}, 
-      "ControllerVariables" :> {}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> ImageTake[
-        Colorize[$CellContext`imgA], {$CellContext`top$$, \
-$CellContext`bottom$$}, {$CellContext`left$$, $CellContext`right$$}], 
-      "Specifications" :> {{$CellContext`top$$, 1, 
-         457}, {$CellContext`bottom$$, 457, 1}, {$CellContext`left$$, 1, 
-         500}, {$CellContext`right$$, 500, 1}}, "Options" :> {}, 
-      "DefaultOptions" :> {}],
-     ImageSizeCache->{791., {424.869140625, 433.130859375}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{
-  3.829197994224223*^9, {3.829621670770588*^9, 3.829621685478923*^9}, {
-   3.829625656556694*^9, 3.8296256688967857`*^9}},
- CellLabel->"Out[10]=",ExpressionUUID->"0bbadf8c-c699-4d0c-87a9-b13040d6ddcd"]
-}, Open  ]],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.829024102641692*^9, 
-  3.8290241099907417`*^9}},ExpressionUUID->"540f8554-5fb2-4a07-9fe1-\
-ebfa7e9b092f"],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.829024111943145*^9, 
-  3.8290241119548197`*^9}},ExpressionUUID->"eca8dc1b-f528-4005-99c7-\
-79cc64a6f18e"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", 
-  RowBox[{"(*", " ", "\[IndentingNewLine]", "   ", 
-   RowBox[{
-   "salvataggio", " ", "immagine", " ", "da", " ", "manipulate", 
-    "\[IndentingNewLine]", "  ", "Controllo", " ", "che", " ", "sia", " ", 
-    "immagine", " ", 
-    RowBox[{"(", "ImageQ", ")"}], "\[IndentingNewLine]", "  ", "dividere", 
-    " ", "manipulate", " ", "in", " ", 
-    RowBox[{"due", "?", " ", "\[IndentingNewLine]", "   ", "dividere"}], " ", 
-    "in", " ", 
-    RowBox[{"aree", "?"}]}], "\[IndentingNewLine]", "*)"}]}]], "Input",
- CellChangeTimes->{{3.829190151468767*^9, 3.8291901535952797`*^9}, {
-   3.8291902734348183`*^9, 3.829190366029421*^9}, {3.829195847847185*^9, 
-   3.82919585695352*^9}, 
-   3.8291965575198803`*^9},ExpressionUUID->"df414382-e15f-4ed7-87f5-\
-bc40b15356cd"],
-
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   RowBox[{"FileNameSetter", "[", 
-    RowBox[{"Dynamic", "[", "selectedFile", "]"}], "]"}],
-   ShowSpecialCharacters->False,
-   ShowStringCharacters->True,
-   NumberMarks->True],
-  FullForm]], "Output",
- CellChangeTimes->{
-  3.829190155117646*^9, {3.829195850162112*^9, 3.82919585729602*^9}},
- CellLabel->
-  "Out[182]//FullForm=",ExpressionUUID->"f82c5cc0-7e3e-4a6c-a1f1-\
-d64dd2ab40e2"]
-}, Open  ]],
-
-Cell[BoxData[
- GraphicsBox[
-  TagBox[RasterBox[CompressedData["
-1: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
-    
-    "], {{0, 142.}, {331., 0}}, {0, 255},
-    ColorFunction->RGBColor],
-   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
-   Selectable->False],
-  DefaultBaseStyle->"ImageGraphics",
-  ImagePadding->{{0., 0.}, {0., 0.}},
-  ImageSizeRaw->{331., 142.},
-  PlotRange->{{0., 331.}, {0., 142.}},
-  PlotRangePadding->Automatic]], "Input",
- CellChangeTimes->{
-  3.829621148066064*^9},ExpressionUUID->"18fe6d93-8a85-4f82-9b08-\
-ebfe6b5751e0"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.829622447204138*^9, 3.829622451567203*^9}, 
-   3.829622514886037*^9},ExpressionUUID->"2e2ec594-7149-47f0-b68f-\
-3fac40ab6135"],
-
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`cl$$ = 5, $CellContext`column1$$ = 
-    1, $CellContext`column2$$ = 1., $CellContext`row1$$ = 
-    1, $CellContext`row2$$ = 457, $CellContext`x$$ = "KMeans", 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
-      Hold[
-       Row[{
-         Item[
-          FileNameSetter[
-           Dynamic[$CellContext`selectedFile]], Alignment -> Center], 
-         Button[
-         "Import", $CellContext`imgD = Import[$CellContext`selectedFile], 
-          Enabled -> Dynamic[$CellContext`selectedFile =!= Null]]}]], 
-      Manipulate`Dump`ThisIsNotAControl}, {{
-       Hold[$CellContext`x$$], "KMeans", "Method"}, {
-      "KMeans", "KMedoids", "Spectral"}}, {{
-       Hold[$CellContext`cl$$], 2, "N. cluster"}, 2, 15, 1}, {
-      Hold[
-       Row[{
-         Manipulate`Place[1], 
-         Manipulate`Place[2]}]], Manipulate`Dump`ThisIsNotAControl}, {{
-       Hold[$CellContext`x$$], "KMeans", "Method"}, {
-      "MeanShift", "GaussianMixture", "NeighborhoodContraction" -> 
-       "Neighborhood Contraction"}}, {
-      Hold[
-       Row[{
-         Manipulate`Place[3]}]], Manipulate`Dump`ThisIsNotAControl}, {
-      Hold[$CellContext`row1$$], 1, 457}, {
-      Hold[$CellContext`row2$$], 457, 1}, {
-      Hold[$CellContext`column1$$], 1, 500}, {
-      Hold[$CellContext`column2$$], 500, 1}, {
-      Hold[
-       Button["Save image", 
-        Export[
-         FileNameJoin[{
-           NotebookDirectory[], 
-           StringJoin["testA.jpg"]}], 
-         Colorize[$CellContext`imgA], "JPEG"], ImageSize -> Large]], 
-      Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
-    1.25, {283., 288.25}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     2, StandardForm, 
-      "Variables" :> {$CellContext`cl$$ = 2, $CellContext`column1$$ = 
-        1, $CellContext`column2$$ = 500, $CellContext`row1$$ = 
-        1, $CellContext`row2$$ = 457, $CellContext`x$$ = "KMeans"}, 
-      "ControllerVariables" :> {}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Colorize[
-        If[
-         Or[$CellContext`x$$ == "KMeans", $CellContext`x$$ == 
-          "KMedoids", $CellContext`x$$ == "Spectral"], 
-         ImageTake[
-          Colorize[
-           ClusteringComponents[
-            ImageResize[$CellContext`imgD, 500], $CellContext`cl$$, 
-            Method -> $CellContext`x$$]], {$CellContext`row1$$, \
-$CellContext`row2$$}, {$CellContext`column1$$, $CellContext`column2$$}], \
-$CellContext`imgA = ClusteringComponents[
-           ImageResize[$CellContext`imgD, 500], Method -> $CellContext`x$$]]],
-       "Specifications" :> {
-        Row[{
-          Item[
-           FileNameSetter[
-            Dynamic[$CellContext`selectedFile]], Alignment -> Center], 
-          Button[
-          "Import", $CellContext`imgD = Import[$CellContext`selectedFile], 
-           Enabled -> Dynamic[$CellContext`selectedFile =!= Null]]}], 
-        Delimiter, {{$CellContext`x$$, "KMeans", "Method"}, {
-         "KMeans", "KMedoids", "Spectral"}, ControlPlacement -> 
-         1}, {{$CellContext`cl$$, 2, "N. cluster"}, 2, 15, 1, Appearance -> 
-         "Labeled", ControlPlacement -> 2}, 
-        Row[{
-          Manipulate`Place[1], 
-          Manipulate`Place[2]}], 
-        Delimiter, {{$CellContext`x$$, "KMeans", "Method"}, {
-         "MeanShift", "GaussianMixture", "NeighborhoodContraction" -> 
-          "Neighborhood Contraction"}, ControlPlacement -> 3}, 
-        Row[{
-          Manipulate`Place[3]}], {$CellContext`row1$$, 1, 
-         457}, {$CellContext`row2$$, 457, 1}, {$CellContext`column1$$, 1, 
-         500}, {$CellContext`column2$$, 500, 1}, Delimiter, 
-        Button["Save image", 
-         Export[
-          FileNameJoin[{
-            NotebookDirectory[], 
-            StringJoin["testA.jpg"]}], 
-          Colorize[$CellContext`imgA], "JPEG"], ImageSize -> Large]}, 
-      "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{606., {456.025390625, 462.974609375}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.829622453721595*^9},
- CellLabel->"Out[44]=",ExpressionUUID->"989a10a3-7e12-488e-ab88-85f9568ee571"]
+ CellChangeTimes->{3.8296279248526783`*^9, 3.829628237627049*^9, 
+  3.829628269173252*^9, 3.829628313512657*^9, 3.829628350700141*^9, 
+  3.829628627036476*^9},
+ CellLabel->"Out[31]=",ExpressionUUID->"0832c79a-7a1a-4071-bf9e-6ea1163dd60f"]
 }, Open  ]]
 },
 WindowSize->{1440, 762},
@@ -881,26 +552,9 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3189, 61, 112, "Input",ExpressionUUID->"95f212cf-d298-40f7-9c94-2bbc20fe303c"],
-Cell[3750, 83, 558, 10, 73, "Input",ExpressionUUID->"fea28f97-c79c-4450-af4e-33b1e59c20e6"],
 Cell[CellGroupData[{
-Cell[4333, 97, 12349, 246, 733, "Input",ExpressionUUID->"b0519130-5075-41ee-b949-a9ef86ba0949"],
-Cell[16685, 345, 8721, 183, 1751, "Output",ExpressionUUID->"89438a80-9ae3-49af-a494-652fb8bd49e8"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[25443, 533, 1490, 38, 103, "Input",ExpressionUUID->"8df040f8-9961-42f5-a79c-2d3fa2fa7c26"],
-Cell[26936, 573, 2228, 44, 884, "Output",ExpressionUUID->"0bbadf8c-c699-4d0c-87a9-b13040d6ddcd"]
-}, Open  ]],
-Cell[29179, 620, 154, 3, 42, "Input",ExpressionUUID->"540f8554-5fb2-4a07-9fe1-ebfa7e9b092f"],
-Cell[29336, 625, 154, 3, 42, "Input",ExpressionUUID->"eca8dc1b-f528-4005-99c7-79cc64a6f18e"],
-Cell[CellGroupData[{
-Cell[29515, 632, 811, 16, 223, "Input",ExpressionUUID->"df414382-e15f-4ed7-87f5-bc40b15356cd"],
-Cell[30329, 650, 423, 13, 67, "Output",ExpressionUUID->"f82c5cc0-7e3e-4a6c-a1f1-d64dd2ab40e2"]
-}, Open  ]],
-Cell[30767, 666, 4299, 77, 224, "Input",ExpressionUUID->"18fe6d93-8a85-4f82-9b08-ebfe6b5751e0"],
-Cell[CellGroupData[{
-Cell[35091, 747, 175, 3, 41, "Input",ExpressionUUID->"2e2ec594-7149-47f0-b68f-3fac40ab6135"],
-Cell[35269, 752, 4918, 108, 1092, "Output",ExpressionUUID->"989a10a3-7e12-488e-ab88-85f9568ee571"]
+Cell[580, 22, 16104, 319, 931, "Input",ExpressionUUID->"b0519130-5075-41ee-b949-a9ef86ba0949"],
+Cell[16687, 343, 8750, 188, 1412, "Output",ExpressionUUID->"0832c79a-7a1a-4071-bf9e-6ea1163dd60f"]
 }, Open  ]]
 }
 ]
