@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     32278,        644]
-NotebookOptionsPosition[     31598,        624]
-NotebookOutlinePosition[     32093,        642]
-CellTagsIndexPosition[     32050,        639]
+NotebookDataLength[     32316,        645]
+NotebookOptionsPosition[     31350,        622]
+NotebookOutlinePosition[     31845,        640]
+CellTagsIndexPosition[     31802,        637]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,57 +21,13 @@ Notebook[{
 Cell[BoxData[
  RowBox[{
   RowBox[{"imgD", " ", "=", 
-   GraphicsBox[
-    TagBox[RasterBox[CompressedData["
-1:eJztyjEKwkAQBdAlNqnUK3iLtJa2EQ+Q4CakWWETEK/oqRzvkPI9+MPMZy7j
-q5+alNLaxuiH97XW4XM/x/Eo6zKX/LyVLc+5duMhymP8niL//QsAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7OQHCTDfyQ==
-      
-      "], {{0, 526.}, {527., 0}}, {0, 255},
-      ColorFunction->RGBColor],
-     BoxForm`ImageTag[
-     "Byte", ColorSpace -> "RGB", Interleaving -> True, MetaInformation -> 
-      Association[
-       "Exif" -> Association[
-         "Orientation" -> 
-          Association["CameraTopOrientation" -> Top, "Mirrored" -> False], 
-          "Software" -> "Shotwell 0.30.10", "ExifTag" -> 68, 
-          "PixelXDimension" -> 527, "PixelYDimension" -> 526], "XMP" -> 
-        Association[
-         "XMPBasicSchema" -> 
-          Association["CreatorTool" -> "Adobe Photoshop CS6 (Macintosh)"], 
-          "XMPMediaManagementSchema" -> 
-          Association[
-           "InstanceID" -> "xmp.iid:E62194301E5D11E5941BFB3BD6212510", 
-            "DocumentID" -> "xmp.did:E62194311E5D11E5941BFB3BD6212510", 
-            "DerivedFrom" -> 
-            Association[
-             "Reference" -> 
-              Association[
-               "InstanceID" -> "xmp.iid:E621942E1E5D11E5941BFB3BD6212510", 
-                "DocumentID" -> 
-                "xmp.did:E621942F1E5D11E5941BFB3BD6212510"]]]]]],
-     Selectable->False],
-    DefaultBaseStyle->"ImageGraphics",
-    ImageSizeRaw->{527., 526.},
-    PlotRange->{{0, 527.}, {0, 526.}}]}], ";"}]], "Input",
+   RowBox[{"Import", "[", 
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", 
+       RowBox[{"StringJoin", "[", "\"\<slide-vuota.png\>\"", "]"}]}], "}"}], 
+     "]"}], "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.829021635404992*^9, 3.829021688111536*^9}, {
    3.829021724085348*^9, 3.829021763560491*^9}, {3.829021840912548*^9, 
    3.829021859647437*^9}, {3.8290219038891363`*^9, 3.8290219069143457`*^9}, {
@@ -143,8 +99,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7OQHCTDfyQ==
    3.8296283371336412`*^9}, {3.829628608531955*^9, 3.829628613656193*^9}, {
    3.829792634040493*^9, 3.829792646058715*^9}, {3.8297927220984097`*^9, 
    3.829792744666316*^9}, {3.8297940567228737`*^9, 3.829794060802396*^9}, {
-   3.8297943693259573`*^9, 3.829794373778821*^9}},
- CellLabel->"In[31]:=",ExpressionUUID->"b0519130-5075-41ee-b949-a9ef86ba0949"],
+   3.8297943693259573`*^9, 3.829794373778821*^9}, {3.829797628015069*^9, 
+   3.829797634209046*^9}, 3.829800569298979*^9, {3.8298037795140343`*^9, 
+   3.829803789482315*^9}, {3.829803861312612*^9, 3.829803890936908*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"b0519130-5075-41ee-b949-a9ef86ba0949"],
 
 Cell[CellGroupData[{
 
@@ -152,12 +110,14 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"selectedFile", "=", "Null"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"edge", " ", "=", " ", "False"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"SetOptions", "[", 
-   RowBox[{"$FrontEnd", ",", 
-    RowBox[{"DynamicEvaluationTimeout", "\[Rule]", "Infinity"}]}], "]"}], 
-  ";"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"edge", " ", "=", " ", "False"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"SetOptions", "[", 
+     RowBox[{"$FrontEnd", ",", 
+      RowBox[{"DynamicEvaluationTimeout", "\[Rule]", " ", "20"}]}], "]"}], 
+    ";"}], "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{
@@ -263,7 +223,7 @@ Cell[BoxData[{
                "]"}], ",", 
              RowBox[{"imgA", "//", "Colorize"}], ",", "\"\<JPEG\>\""}], "]"}],
             ",", " ", 
-           RowBox[{"ImageSize", "->", "Large"}]}], "]"}]}], "]"}], ",", 
+           RowBox[{"ImageSize", "->", "Large"}]}], "]"}]}], "]"}], ",", " ", 
        "\[IndentingNewLine]", 
        RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
         RowBox[{
@@ -424,8 +384,12 @@ Cell[BoxData[{
    3.829794325889752*^9, 3.8297943268459*^9}, {3.829794606367488*^9, 
    3.829794611705945*^9}, {3.829795442556182*^9, 3.8297955132519503`*^9}, {
    3.829795574977261*^9, 3.829795646861278*^9}, {3.829795689811611*^9, 
-   3.829795718933811*^9}},
- CellLabel->"In[71]:=",ExpressionUUID->"aafab7b7-9599-46d2-882e-4958dc2eed6d"],
+   3.829795718933811*^9}, {3.8298015483345013`*^9, 3.82980160439913*^9}, {
+   3.829802434647069*^9, 3.829802460874474*^9}, {3.8298027181003933`*^9, 
+   3.829802721950554*^9}, {3.82980276698145*^9, 3.829802768152545*^9}, {
+   3.829802877840292*^9, 3.8298028780115843`*^9}, {3.829803490494761*^9, 
+   3.82980349299*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"aafab7b7-9599-46d2-882e-4958dc2eed6d"],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -468,7 +432,7 @@ Cell[BoxData[
                StringJoin["clusterImage.jpg"]}], 
              Colorize[$CellContext`imgA], "JPEG"], ImageSize -> Large]], 
           Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
-        430., {194., 199.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        430., {212., 217.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
         Typeset`skipInitDone$$ = True}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          2, StandardForm, 
@@ -516,7 +480,7 @@ Cell[BoxData[
                 StringJoin["clusterImage.jpg"]}], 
               Colorize[$CellContext`imgA], "JPEG"], ImageSize -> Large]}, 
           "Options" :> {}, "DefaultOptions" :> {}],
-         ImageSizeCache->{479., {296.6875, 302.3125}},
+         ImageSizeCache->{479., {314.6875, 320.3125}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -530,14 +494,14 @@ Cell[BoxData[
     {
      TagBox[
       StyleBox[
-       DynamicModuleBox[{$CellContext`bottom$$ = 393, $CellContext`left$$ = 
+       DynamicModuleBox[{$CellContext`bottom$$ = 429, $CellContext`left$$ = 
         1, $CellContext`right$$ = 430, $CellContext`top$$ = 1, 
         Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
         Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, 
         Typeset`animvar$$ = 1, Typeset`name$$ = "\"untitled\"", 
         Typeset`specs$$ = {{
-          Hold[$CellContext`top$$], 1, 393}, {
-          Hold[$CellContext`bottom$$], 393, 1}, {
+          Hold[$CellContext`top$$], 1, 429}, {
+          Hold[$CellContext`bottom$$], 429, 1}, {
           Hold[$CellContext`left$$], 1, 430}, {
           Hold[$CellContext`right$$], 430, 1}, {
           Hold[
@@ -555,11 +519,11 @@ Cell[BoxData[
                NotebookDirectory[], 
                StringJoin["takeCluster.jpg"]}], $CellContext`imgDrop, "JPEG"],
              ImageSize -> Large]], Manipulate`Dump`ThisIsNotAControl}}, 
-        Typeset`size$$ = {430., {194., 199.}}, Typeset`update$$ = 0, 
+        Typeset`size$$ = {1102.9375, {24.375, 12.75}}, Typeset`update$$ = 0, 
         Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          1, StandardForm, 
-          "Variables" :> {$CellContext`bottom$$ = 393, $CellContext`left$$ = 
+          "Variables" :> {$CellContext`bottom$$ = 429, $CellContext`left$$ = 
             1, $CellContext`right$$ = 430, $CellContext`top$$ = 1}, 
           "ControllerVariables" :> {}, 
           "OtherVariables" :> {
@@ -579,7 +543,7 @@ $CellContext`imgDrop = ImageTake[
               Colorize[$CellContext`imgA], {$CellContext`top$$, \
 $CellContext`bottom$$}, {$CellContext`left$$, $CellContext`right$$}]], 
           "Specifications" :> {{$CellContext`top$$, 1, 
-             393}, {$CellContext`bottom$$, 393, 1}, {$CellContext`left$$, 1, 
+             429}, {$CellContext`bottom$$, 429, 1}, {$CellContext`left$$, 1, 
              430}, {$CellContext`right$$, 430, 1}, Delimiter, 
             Row[{
               Button[
@@ -595,7 +559,7 @@ $CellContext`bottom$$}, {$CellContext`left$$, $CellContext`right$$}]],
                 StringJoin["takeCluster.jpg"]}], $CellContext`imgDrop, 
               "JPEG"], ImageSize -> Large], Delimiter}, "Options" :> {}, 
           "DefaultOptions" :> {}],
-         ImageSizeCache->{477., {306.1875, 311.8125}},
+         ImageSizeCache->{1320., {128.6875, 134.3125}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -618,8 +582,42 @@ $CellContext`bottom$$}, {$CellContext`left$$, $CellContext`right$$}]],
    3.829793391491897*^9}, 3.829794073221115*^9, 3.829794328101039*^9, 
    3.8297943933335657`*^9, 3.829794612283945*^9, 3.829795532961882*^9, 
    3.8297956045222387`*^9, 3.829795647945177*^9, 3.8297956909908323`*^9, 
-   3.829795730393733*^9},
- CellLabel->"Out[75]=",ExpressionUUID->"6a1c19ba-3294-4fab-a3b9-8cda9f9d30b1"]
+   3.829795730393733*^9, 3.829797613238956*^9, 3.8297976550136757`*^9, 
+   3.829800578962781*^9, 3.829801604957118*^9, 3.829802462564033*^9, 
+   3.82980276986132*^9, 3.829802878960628*^9, 3.829803493503663*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"a9db2ee7-9267-4e1b-bb0b-0a1018d73d84"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ImageResize", "imginv", 
+   "\"Expecting an image or graphics instead of \
+\\!\\(\\*RowBox[{\\\"imgD\\\"}]\\).\"", 2, 1, 1, 22759467837813699778, 
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.829803780577476*^9},
+ CellLabel->"",ExpressionUUID->"1b721661-926d-4daa-ba34-3965179bc206"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ClusteringComponents", "nosup", 
+   "\"ClusteringComponents does not support this type of data. \"", 2, 1, 2, 
+   22759467837813699778, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.829803780614972*^9},
+ CellLabel->"",ExpressionUUID->"4379338f-c685-4b6d-9819-35e73c3d9f8d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Colorize", "invinput", 
+   "\"Expecting an integer matrix or an image instead of \
+\\!\\(\\*RowBox[{\\\"ClusteringComponents\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"ImageResize\\\", \\\"[\\\", RowBox[{\\\"imgD\\\", \\\",\\\
+\", \\\"430\\\"}], \\\"]\\\"}], \\\",\\\", \\\"2\\\", \\\",\\\", \
+RowBox[{\\\"Method\\\", \\\"\[Rule]\\\", \\\"\\\\\\\"KMeans\\\\\\\"\\\"}]}], \
+\\\"]\\\"}]\\).\"", 2, 1, 3, 22759467837813699778, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.829803780673967*^9},
+ CellLabel->"",ExpressionUUID->"83cc5284-df32-47e2-bfa0-b4f3d1a6eabe"]
 }, Open  ]]
 },
 WindowSize->{1440., 782.25},
@@ -641,10 +639,13 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 7912, 126, 104, "Input",ExpressionUUID->"b0519130-5075-41ee-b949-a9ef86ba0949"],
+Cell[558, 20, 5828, 84, 29, "Input",ExpressionUUID->"b0519130-5075-41ee-b949-a9ef86ba0949"],
 Cell[CellGroupData[{
-Cell[8495, 150, 14078, 277, 401, "Input",ExpressionUUID->"aafab7b7-9599-46d2-882e-4958dc2eed6d"],
-Cell[22576, 429, 9006, 192, 1241, "Output",ExpressionUUID->"6a1c19ba-3294-4fab-a3b9-8cda9f9d30b1"]
+Cell[6411, 108, 14422, 283, 401, "Input",ExpressionUUID->"aafab7b7-9599-46d2-882e-4958dc2eed6d"],
+Cell[20836, 393, 9199, 194, 922, "Output",ExpressionUUID->"a9db2ee7-9267-4e1b-bb0b-0a1018d73d84"],
+Cell[30038, 589, 345, 8, 22, "Message",ExpressionUUID->"1b721661-926d-4daa-ba34-3965179bc206"],
+Cell[30386, 599, 331, 7, 22, "Message",ExpressionUUID->"4379338f-c685-4b6d-9819-35e73c3d9f8d"],
+Cell[30720, 608, 614, 11, 22, "Message",ExpressionUUID->"83cc5284-df32-47e2-bfa0-b4f3d1a6eabe"]
 }, Open  ]]
 }
 ]
