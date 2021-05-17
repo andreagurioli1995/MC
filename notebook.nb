@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4305,        102]
-NotebookOptionsPosition[      3548,         82]
-NotebookOutlinePosition[      3949,         98]
-CellTagsIndexPosition[      3906,         95]
+NotebookDataLength[      3271,         87]
+NotebookOptionsPosition[      2515,         67]
+NotebookOutlinePosition[      2916,         83]
+CellTagsIndexPosition[      2873,         80]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,29 +38,13 @@ Cell[BoxData[
  TemplateBox[{
   "Get", "bebal", 
    "\"Unterminated uses of BeginPackage or Begin in \\!\\(\\*RowBox[{\\\"<<\\\
-\", \\\"\\\\\\\"package.m\\\\\\\"\\\"}]\\).\"", 2, 2, 4, 22759466356628022867,
+\", \\\"\\\\\\\"package.m\\\\\\\"\\\"}]\\).\"", 2, 2, 1, 22762448073488192276,
     "Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{
-  3.8285869268727465`*^9, 3.8285870497035313`*^9, 3.8285878039805317`*^9, 
-   3.8290173139995737`*^9, 3.82901737722895*^9, 3.829017734040626*^9, 
-   3.8290179081916313`*^9, 3.829018017294537*^9, 3.8290181929965982`*^9, 
-   3.829018223295546*^9, 3.8290182942810507`*^9, 3.829018363443617*^9, 
-   3.8290187767603292`*^9, 3.829018867617126*^9, 3.829019029848692*^9, 
-   3.829019190739015*^9, 3.829019292422584*^9, 3.82901942580357*^9, 
-   3.82901946300587*^9, {3.829019525313332*^9, 3.8290195704114513`*^9}, 
-   3.829019891266231*^9, 3.829019968762663*^9, {3.829020003322495*^9, 
-   3.8290200205219088`*^9}, 3.829020173627358*^9, 3.829020205645052*^9, {
-   3.829020247324212*^9, 3.8290202646516933`*^9}, 3.829020540266699*^9, 
-   3.829020592524847*^9, 3.829020673397009*^9, 3.829020705994144*^9, 
-   3.8290207387819347`*^9, 3.829020772546173*^9, 3.829020827125166*^9, 
-   3.829020864651173*^9, {3.8290209110210533`*^9, 3.829020934992778*^9}, 
-   3.829020980233348*^9, 3.829021398323844*^9, 3.829024227556917*^9, 
-   3.829800931901174*^9, 3.829801220604382*^9, 3.829802550279645*^9, 
-   3.8298030691059923`*^9, 3.8298033430553417`*^9, 3.829803564784892*^9},
+ CellChangeTimes->{3.830258526766737*^9},
  CellLabel->
   "During evaluation of \
-In[2]:=",ExpressionUUID->"43c0922b-f752-4f5f-86f1-234ebadd6ce2"],
+In[2]:=",ExpressionUUID->"2dae097a-1329-4d3e-9a6f-ac2c370f769f"],
 
 Cell[BoxData["\<\"Private`\"\>"], "Output",
  CellChangeTimes->{
@@ -71,14 +55,15 @@ Cell[BoxData["\<\"Private`\"\>"], "Output",
    3.8290209349989367`*^9}, 3.829020980262075*^9, 3.8290213983403263`*^9, 
    3.8290242275631113`*^9, 3.829800931999473*^9, 3.829801220609284*^9, 
    3.829802550287387*^9, 3.829803069112857*^9, 3.829803343061761*^9, 
-   3.829803564789217*^9},
- CellLabel->"Out[2]=",ExpressionUUID->"f5577189-54bd-42bb-8d9f-a2d08895e2a8"]
+   3.829803564789217*^9, {3.8302584024178257`*^9, 3.8302584446546164`*^9}, 
+   3.8302584908566303`*^9, 3.83025852688027*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"f8a80ea6-a764-4e62-8060-2d3292fc729f"]
 }, Open  ]],
 
 Cell[BoxData[
  RowBox[{"TestManipulate", "[", "]"}]], "Input",
  CellChangeTimes->{{3.8290173060924997`*^9, 3.829017306092743*^9}},
- CellLabel->"In[4]:=",ExpressionUUID->"9d677f4c-c9ec-41e1-b8f5-509cd3a00d1f"]
+ CellLabel->"In[3]:=",ExpressionUUID->"9d677f4c-c9ec-41e1-b8f5-509cd3a00d1f"]
 },
 WindowSize->{1440., 782.25},
 WindowMargins->{{-1440, Automatic}, {0, Automatic}},
@@ -100,10 +85,10 @@ Notebook[{
 Cell[558, 20, 226, 5, 29, "Input",ExpressionUUID->"624aa596-da26-44dc-bc8b-f23e70059121"],
 Cell[CellGroupData[{
 Cell[809, 29, 297, 5, 29, "Input",ExpressionUUID->"afaba150-e1c2-4d31-9e43-48bd8055622d"],
-Cell[1109, 36, 1538, 26, 22, "Message",ExpressionUUID->"43c0922b-f752-4f5f-86f1-234ebadd6ce2"],
-Cell[2650, 64, 671, 10, 33, "Output",ExpressionUUID->"f5577189-54bd-42bb-8d9f-a2d08895e2a8"]
+Cell[1109, 36, 406, 10, 22, "Message",ExpressionUUID->"2dae097a-1329-4d3e-9a6f-ac2c370f769f"],
+Cell[1518, 48, 770, 11, 33, "Output",ExpressionUUID->"f8a80ea6-a764-4e62-8060-2d3292fc729f"]
 }, Open  ]],
-Cell[3336, 77, 208, 3, 29, "Input",ExpressionUUID->"9d677f4c-c9ec-41e1-b8f5-509cd3a00d1f"]
+Cell[2303, 62, 208, 3, 29, "Input",ExpressionUUID->"9d677f4c-c9ec-41e1-b8f5-509cd3a00d1f"]
 }
 ]
 *)
