@@ -43,4 +43,5 @@ TestManipulate[] :=
     ]}](*manipulate relativa ad edge detection e partizionamento immagine*);
 
 
-End[](*termina package*)
+End[](*termina Private*)
+EndPackage[](*termina Package*)
