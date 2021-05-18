@@ -1,0 +1,16 @@
+Possibili sviluppi futuri
+
+
+Rimane apreta una finestra per quanto concerne la possibilità di isolare il cluster selezionato, andando a rimuovere il background dall'immagine partizionata.
+Per questa funzionalità sono stata analizzata una problematica fundamentale.
+-La rimozione del background default elimina il colore dominante dall'immagine presa, il che isola al controario il cluster in quanto di colore dominante all'immagine stessa.
+Si è quindi pensato di effettuare una ricerca dei colori interni all'immagine, al fine di inidirizzare la rimozione del colore verso colori non dominanti.
+Questa tecnica può portare a soluzioni valide, il problema resta sulla selezione dei colori da isolare in quanto, a seconda della casistica, abbiamo colori di tipo predominante e non.
+
+Un'ulteriore problematica riscontrata di minore entità, è data dalla lentezza del tool per l'applicazione dell'algoritmo di clustering sull'immagine selezionata.
+Tale rallentamento, ad un utente inesperto può creare confusione e portarlo verso una reiterazione del click, instanziando nuovamente l'algoritmo di clustering e rallentando ulteriormente
+l'applicativo. Si è provato ad applicare quindi una gif di caricamento in sostituzione all'immagine durante la fase di running dell'algoritmo; purtroppo non è stato possibile astrarre lo stato 
+di caricamento per effettuare una sostituzione temporanea dell'immagine con la gif designata.
+
+Si è poi riflettuto sull'applicazione di tecniche di computer vision applicabili sull'immagine inizialmente importata, l'adozione di una rete neurale opportunamente trainata per effettuare
+ricerce di incongruenze su immagini, può essere un valido supporto in ambiente medico al fine di muoversi verso una analisi più raffinata e attenta ai dettagli.
